@@ -1,0 +1,18 @@
+.comments {
+    margin: 100px 20px;
+}
+.comments #comments {
+    margin: 10px 0;
+}
+.comments #comments div {
+    display: block;
+    list-style: bullets;
+    border: 2px solid #99999A;
+    border-radius: 5px;
+    margin: 5px 20px;
+    width: auto;
+}
+.comments #comments div span{
+    margin: 5px;
+    font-size: 16px;
+}

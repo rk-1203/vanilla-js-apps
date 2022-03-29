@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    background: #ebf7fa;
+}
+
+#root {
+    display: flex;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
+
+#root > :nth-child(n) {
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+
+/* ############### EMAIL FOLDER ################# */
+#root .email_folder{
+    flex-grow: 1;
+    flex-basis: 110px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+#root .email_folder .folder{
+    height: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+#root .email_folder .folder.active{
+    text-transform: bold;
+    background-color: #fff
+}
+
+#root .email_folder .folder .count{
+    margin-left: 10px;
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+/* ############### EMAIL LIST ################# */
+#root .email_list{
+    flex-grow: 2;
+    flex-basis: 250px;
+    flex-shrink: 0;
+}
+
+#root .email_list .email_list_card{
+    position: relative;
+    padding: 10px;
+    height: 100px;
+    border: 1px solid grey;
+}
+
+#root .email_list .email_list_card .material-icons-outlined{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+#root .email_list .email_list_card div{
+    padding: 2px;
+}
+
+#root .email_list .email_list_card.active{
+    text-transform: bold;
+    background-color: #fff
+}
+
+/* ############### EMAIL DESC ################# */
+#root .email_desc{
+    flex-grow: 10;
+    flex-shrink: 1;
+    flex-basis: 200px;
+}
+
+#root .email_desc .email_metadata{
+    flex-direction: row;
+    min-height: 150px;
+    padding: 20px;
+    border: 1px solid grey;
+}
+
+#root .email_desc .email_metadata div{
+    padding: 10px 0;
+}
+
+#root .email_desc .email_desc_view{
+    flex-direction: row;
+    flex: 1;
+    background: #fff;
+    padding: 50px;
+    overflow-y: auto;
+    border: 1px solid grey;
+}
+
+/* ############### TEMPLATES ################# */
+#templates {
+    display: none;
+}

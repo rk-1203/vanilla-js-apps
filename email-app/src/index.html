@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REmail</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="index.js" async type="module"></script>
+</head>
+<body>
+    <div id="root">
+        <div id="email-folder" class="email_folder">
+            <div id="inbox" class="folder">Inbox<span data-id="count" class="count"></span></div>
+            <div id="read" class="folder">Read<span data-id="count" class="count"></span></div>
+            <div id="unread" class="folder">Unread<span data-id="count" class="count"></span></div>
+            <div id="fav" class="folder">Favorite<span data-id="count" class="count"></span></div>
+        </div>
+        <div id="email-list" class="email_list">
+        </div>
+        <div id="email-desc" class="email_desc">
+            <div class="email_metadata">
+                <div>From: <span data-id="from"></span></div>
+                <div>To: <span data-id="to"></span></div>
+                <div>Subject: <span data-id="subject"></span></div>
+                <div>Time: <span data-id="time"></span></div>
+            </div>
+            <div class="email_desc_view"><span data-id="desc"></span></div>
+    </div>
+
+    <div id="templates">
+        <div data-id="email-list-template" class="email_list_card">
+            <span class="material-icons-outlined">delete</span>
+            <div>From: <span data-id="from"></span></div>
+            <div>Subject: <span data-id="subject"></span></div>
+            <div>Description: <span data-id="desc"></span></div>
+            <div>Time: <span data-id="time"></span>
+            <div>
+                <input data-id="read-flag" type="checkbox">Read</input>
+                <input data-id="fav-flag" type="checkbox">Favorite</input>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script type="module" src="./index.js" ></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Food Order App</title>
+    </head>
+    <body>
+        <div id="root">
+            <div class="search-container">
+                <input type="text" id="search">
+            </div>
+            <div class="sort-search">
+                <div class="sort-by-container">
+                    <span class="title">Sort By :</span>
+                    <select id="sort-by">
+                        <option value="name">Name</option>
+                        <option value="rating">Rating</option>
+                        <option value="eta">ETA</option>
+                    </select>
+                </div>
+                <div class="filter-container">
+                    <span class="title">Filter By :</span>
+                    <select id="filter-name">
+                        <option value="tags">Tags</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                    <input type="text" id="filter-value">
+                </div>
+                <div class="favorite-container">
+                    <span class="material-icons-outlined" id="bookmark-page">bookmark_border</span>
+                </div>
+            </div>
+            <div id="cards">
+                <div id="cards-container"></div>
+                <div id="pagination">
+                    <button id="page-left" data-id="left"><</button>
+                    <div id="pages"></div>
+                    <button id="page-right" data-id="right">></button>
+                </div>
+            </div>
+        </div>
+        <div id="template-container">
+            <div id="restaurent-card-template" class="restaurant-card">
+                <span class="material-icons-outlined" data-id="bookmark">bookmark_border</span>
+                <p>Name: <span data-id="name"></span></p>
+                <p>Rating: <span data-id="rating"></span></p>
+                <p>ETA: <span data-id="eta"></span></p>
+                <p>Location: <span data-id="location"></span></p>
+                <p>Tags: <span data-id="tags"></span></p>
+            </div>
+            <span id="page-template"></span>
+        </div>
+    </body>
+</html>

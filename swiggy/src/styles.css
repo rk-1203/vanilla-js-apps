@@ -1,0 +1,81 @@
+#root {
+    margin: 20px;
+    height: 100vh;
+}
+
+#root .search-container{
+    padding: 10px 0;
+}
+
+#root .search-container input{
+    width: 100%;
+}
+
+.sort-search {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.sort-search .title{
+    margin-right: 4px;
+}
+
+.sort-search :nth-child(n) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#cards-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin: 10px 0;
+    /* border: 1px solid #ddd;
+    border-radius: 10px; */
+    overflow-y: auto;
+}
+
+.restaurant-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#template-container {
+    display: none;
+}
+
+.material-icons-outlined {
+    float: right;
+    cursor: pointer;
+}
+
+#pagination {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-basis: 400px;
+    align-items: center;
+}
+
+#pagination :first-child, #pagination :last-child {
+    cursor: pointer;
+}
+
+#pages {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 400px;
+}
+
+#pages > span {
+    cursor: pointer;
+}
+
+#pages > span.active {
+    color: red;
+}
